@@ -9,7 +9,7 @@ inv = {}
 
 # Include some information about the script in output
 puts "# This file is created automatically"
-puts "# Please do not modify this file manually it's contents are sourced from the puppet-core repository"
+puts "# Please do not modify this file manually it's contents are sourced from a puppet repository"
 puts "# It iterates over environments and lists contents from data/nodes/*.yaml and data/roles/*.yaml directories"
 
 # Iterate over each `dir` in current directory
