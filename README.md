@@ -45,7 +45,8 @@ gems.
 
 ## Usage
 
-Put this script in the root of your puppet environments, change to the directory and run:
+Put this script in the root of your puppet environments folder, 
+then change to the directory and run:
 
 ```bash
 ruby create_inventory.rb > inventory.yaml
