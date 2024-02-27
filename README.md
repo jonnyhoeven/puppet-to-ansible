@@ -1,4 +1,4 @@
-# Create Ansible Inventory
+# Puppet to Ansible
 
 The [create_inventory.rb](./create_inventory.rb) ruby script
 parses puppet roles, profile files and generates an Ansible inventory file.
