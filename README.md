@@ -14,13 +14,13 @@ environment A
 │  │  ├─ hosts
 │  │  │  ├─ hostname A
 │  │  │  │  ├─ vars
-│  │  │  │  │  ├─ puppet::key::var-y
-│  │  │  │  │  ├─ puppet::key::var-z
+│  │  │  │  │  ├─ puppet::key::host-var-y
+│  │  │  │  │  ├─ puppet::key::host-var-z
 │  │  │  ├─ hostname B
 │  │  │  │  ├─ vars
-│  │  │  │  │  ├─ puppet::key::var-x
-│  │  │  │  │  ├─ puppet::key::var-y
-│  │  │  │  │  ├─ puppet::key::var-z
+│  │  │  │  │  ├─ puppet::key::host-var-x
+│  │  │  │  │  ├─ puppet::key::host-var-y
+│  │  │  │  │  ├─ puppet::key::host-var-z
 │  │  ├─ vars
 │  │  │  ├─ puppet::key::role-var-x
 │  │  │  ├─ puppet::key::role-var-y
