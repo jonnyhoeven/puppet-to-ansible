@@ -4,7 +4,7 @@ The [create_inventory.rb](./create_inventory.rb) ruby script
 parses puppet environments, roles and hosts to generates an Ansible compatible inventory file.
 
 The mapping of the puppet environment to the Ansible inventory is as follows:
-For each environment folder, the script will look for a `data/nodes` folder and looks up the role in `data.roles`.
+For each environment folder, the script will look for a `data/nodes` folder and looks up the role in `data/roles`.
 And collects all the variables from the `data/nodes` folder and the `data/roles` folder respectively.
 
 ```
