@@ -1,11 +1,11 @@
 # Puppet to Ansible
 
 The [create_inventory.rb](./create_inventory.rb) ruby script
-parses puppet environments, roles and hosts to generate an Ansible compatible inventory file.
+parses puppet environments, roles and hosts to generate a Ansible compatible inventory file.
 
-The mapping of the puppet environment to the Ansible inventory is as follows:
-For each environment folder, the script will look for a `data/nodes` folder and looks up the role in `data/roles`.
-And collects all the keys from the `data/nodes` folder and the `data/roles` folder respectively.
+The mapping of the Puppet environment to the Ansible inventory is as follows:
+For each environment folder, the script will look for `data/nodes` folders and looks up the role in `data/roles`
+while collecting all the keys from the `data/nodes` folder and the `data/roles` folder respectively.
 
 ```
 environment A
@@ -31,17 +31,17 @@ environment A
 
 ### Ruby script
 
-Ruby is included in any modern Linux distribution.
+- Ruby is included in any modern Linux distribution.
 
 ```bash
 sudo apt install ruby
 ```
 
-If you're using Windows, you can install Ruby from [rubyinstaller.org](https://rubyinstaller.org/).
+- If you're using Windows, you can install Ruby from [rubyinstaller.org](https://rubyinstaller.org/).
 
-All Puppet agents include [Ruby AIO](https://community.theforeman.org/t/puppet-s-aio-packages-and-smart-proxy/4711)
-which is a Ruby runtime environment that includes the Ruby language, the Puppet libraries, and a set of Puppet-specific
-gems.
+- All Puppet agents include [Ruby AIO](https://community.theforeman.org/t/puppet-s-aio-packages-and-smart-proxy/4711)
+  which is a Ruby runtime environment that includes the Ruby language, the Puppet libraries, and a set of Puppet-specific
+  gems.
 
 ## Usage
 
