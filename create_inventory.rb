@@ -11,6 +11,7 @@ inv = {}
 puts "# This file is created automatically"
 puts "# Please do not modify this file manually it's contents are sourced from a puppet repository"
 puts "# It iterates over environments and lists contents from data/nodes/*.yaml and data/roles/*.yaml directories"
+puts "# See https://github.com/jonnyhoeven/puppet-to-ansible/"
 
 # Iterate over each `dir` in current directory
 Dir.glob('./*/') do |dir|
