@@ -1,35 +1,12 @@
 # Puppet to Ansible
 
-This Ruby script is used to create your Ansible inventory from YAML files in puppet filesystems.
-It reads YAML files from the `data/nodes` and `data/roles` directories of each environment,
+This Ruby script can be used to create new Ansible inventories from YAML files in Puppet repository filesystems.
+
+Reads YAML files from the `data/nodes` and `data/roles` directories for each environment,
 and builds `inv` representing your updated Ansible inventory.
 
-The [create_inventory.rb](./create_inventory.rb) ruby script
-parses puppet environments, roles and hosts to generate Ansible compatible inventory files.
-
-The mapping of the Puppet environment to the Ansible inventory is as follows:
-For each environment folder, the script will look for `data/nodes` folders and looks up the role in `data/roles`
-while collecting all the keys from the `data/nodes` folder and the `data/roles` folder respectively.
-
-```
-environment A
-├─ children
-│  ├─ role name x
-│  │  ├─ hosts
-│  │  │  ├─ hostname A
-│  │  │  │  ├─ vars
-│  │  │  │  │  ├─ puppet::key::host-var-y
-│  │  │  │  │  ├─ puppet::key::host-var-z
-│  │  │  ├─ hostname B
-│  │  │  │  ├─ vars
-│  │  │  │  │  ├─ puppet::key::host-var-x
-│  │  │  │  │  ├─ puppet::key::host-var-y
-│  │  │  │  │  ├─ puppet::key::host-var-z
-│  │  ├─ vars
-│  │  │  ├─ puppet::key::role-var-x
-│  │  │  ├─ puppet::key::role-var-y
-│  │  │  ├─ puppet::key::role-var-z
-```
+The [create_inventory.rb](./create_inventory.rb) ruby script parses puppet environment filesystems and converts 
+each role and host file to a single Ansible compatible inventory file.
 
 ## Requirements
 
@@ -43,9 +20,9 @@ sudo apt install ruby
 
 - If you're using Windows, you can install Ruby from [rubyinstaller.org](https://rubyinstaller.org/).
 
-- All Puppet agents include [Ruby AIO](https://community.theforeman.org/t/puppet-s-aio-packages-and-smart-proxy/4711)
-  which is a Ruby runtime environment that includes the Ruby language, the Puppet libraries, and a set of Puppet-specific
-  gems.
+- All Puppet agents include [Ruby](https://www.ruby-lang.org/en/)
+  which is a Ruby runtime environment that includes the Ruby language, the Puppet libraries, and a set
+  of Puppet-specific gems.
 
 ## Usage
 
@@ -60,4 +37,4 @@ A new [inventory.yaml](./inventory.yaml) file will be created.
 
 ## What now?
 
-You can use this inventory file to run Ansible playbooks.
+You can use this inventory file to run Ansible playbooks on your environments and nodes.
