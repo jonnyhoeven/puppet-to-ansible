@@ -1,6 +1,6 @@
-# This script is used to create an Ansible inventory from YAML files in a puppet filesystem.
+# This script is used to create your Ansible inventory from YAML files in puppet filesystems.
 # It reads YAML files from the `data/nodes` and `data/roles` directories of each environment,
-# and builds a nested hash (`inv`) representing the inventory.
+# and builds `inv` representing your updated Ansible inventory.
 
 require 'psych'
 
@@ -9,7 +9,7 @@ inv = {}
 
 # Include some information about the script in output
 puts "# This file is created automatically"
-puts "# Please do not modify this file manually it's contents are sourced from a puppet repository"
+puts "# Please do not modify this file manually it's contents are sourced from any puppet repository"
 puts "# It iterates over environments and lists contents from data/nodes/*.yaml and data/roles/*.yaml directories"
 puts "# See https://github.com/jonnyhoeven/puppet-to-ansible/"
 
@@ -77,7 +77,7 @@ Dir.glob('./*/') do |dir|
       end
 
     rescue Psych::SyntaxError => e
-      # If there's a syntax error in the YAML file, print an error message
+      # If syntax error in the YAML file, print error message
       STDERR.puts "# Failed to parse #{file}: #{e.message}"
     end
   end
