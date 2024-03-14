@@ -21,8 +21,8 @@ sudo apt install ruby
 - If you're using Windows, you can install Ruby from [rubyinstaller.org](https://rubyinstaller.org/).
 
 - All Puppet agents include [Ruby](https://www.ruby-lang.org/en/)
-  which is a Ruby runtime environment that includes the Ruby language, some Puppet libraries, and a set
-  of Puppet-specific gems.
+  The Ruby runtime environment on Puppet includes the Ruby language, some Ruby libraries and a set
+  of Puppet specific gems.
 
 ## Usage
 
