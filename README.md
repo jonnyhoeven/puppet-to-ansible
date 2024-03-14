@@ -12,7 +12,7 @@ each role and host file to a single Ansible compatible inventory file.
 
 ### Ruby script
 
-- Ruby is included in most modern Linux distribution.
+- Ruby is included in most modern Linux distributions.
 
 ```bash
 sudo apt install ruby
