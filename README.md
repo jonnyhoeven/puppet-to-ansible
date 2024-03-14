@@ -37,4 +37,4 @@ A new [inventory.yaml](./inventory.yaml) file will be created.
 
 ## What now?
 
-You can use this inventory file to run Ansible playbooks on your environments and nodes.
+You can use this inventory file to run Ansible playbooks on your environments, roles and nodes.
