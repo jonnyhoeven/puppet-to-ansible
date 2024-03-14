@@ -1,5 +1,9 @@
 # Puppet to Ansible
 
+This Ruby script is used to create your Ansible inventory from YAML files in puppet filesystems.
+It reads YAML files from the `data/nodes` and `data/roles` directories of each environment,
+and builds `inv` representing your updated Ansible inventory.
+
 The [create_inventory.rb](./create_inventory.rb) ruby script
 parses puppet environments, roles and hosts to generate Ansible compatible inventory files.
 
